@@ -65,6 +65,9 @@ Once you have above Prerequisite you can Directly use this repo to deploy media 
 ### Destroy when you are finish  
 > terraform destroy
 
+# Try Actual Hands-On in Browser based Katakoda Scenerio
+![Katacoda Logo](assets/katakoda.PNG)
+
 
 # What this Actually Does ?
 * Creates a VPC in YOur AWS region 
