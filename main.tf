@@ -1,8 +1,6 @@
-resource "aws_internet_gateway" "lab_gateway" {
-  vpc_id = aws_vpc.lab_vpc.id
-  tags = {
-    Name = var.projecttag
-  }
-
+provider "aws" {
+  region     = var.region_of_deployment
+  access_key = var.aws_access_key
+  secret_key = var.aws_secret_key
 }
 
