@@ -19,7 +19,7 @@ variable "cidr_of_public_subnet" {
   default = "10.100.0.0/24"
 }
 
-variable "aws_access_key" {
+/* variable "aws_access_key" {
   type    = string
   default = "AKIA26457DXPZWFWXOAG"
 }
@@ -27,7 +27,7 @@ variable "aws_access_key" {
 variable "aws_secret_key" {
   type    = string
   default = "g9aTwigiO9jvME6pmKaIUKTJStnfW95lqym7DJW0"
-}
+} */
 
 variable "ec2_ami" {
   type    = string
