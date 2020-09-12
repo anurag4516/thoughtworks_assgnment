@@ -23,6 +23,13 @@ If you donot Have above follow below Links and steps
 * Create Free tier AWS Account
 * Get Acess Key and Secret 
 
+
+#### Wget your .pem file here
+
+> wget {{url}}  
+> chmod 400 {{yourpemname}}  
+
+
 ### a) Ansible (atleast version 2.9.4) + Hashicorp Terraform Version (atleast version 0.12) to be present on host machine 
 
 If you donot have above follow below links  
@@ -37,16 +44,27 @@ If you donot have above follow below links
 > git clone https://github.com/anurag4516/thoughtworks_assgnment.git  
 
 > cd thoughtworks_assgnment
+>
 
 ## Customize your I/P Parameters 
 
 * Set AWSAccess key in  aws_access_key variable in variables.tf
 * Set AWSSecret key in  aws_secret_key variable in variables.tf
+### OR
+> export AWS_ACCESS_KEY_ID={your Cred}  
+> export AWS_SECRET_ACCESS_KEY={yourcred}  
+
 * Set AmiID key in  ec2_ami variable in variables.tf
 * Set AWS user Pem key naem in  ec2_key_name variable in variables.tf
 
 Once you have above Prerequisite you can Directly use this repo to deploy media wiki in your AWS Env by firing below command .
+> terraform init
 > terraform apply -auto-approve
+
+
+### Destroy when you are finish  
+> terraform destroy
+
 
 # What this Actually Does ?
 * Creates a VPC in YOur AWS region 
