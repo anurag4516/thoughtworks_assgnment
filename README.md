@@ -66,7 +66,10 @@ Once you have above Prerequisite you can Directly use this repo to deploy media 
 > terraform destroy
 
 # Try Actual Hands-On in Browser based Katakoda Scenerio
-![Katacoda Logo](assets/katakoda.PNG)
+![Katacoda Logo](assets/katakoda.PNG)  
+
+[Click Here to try this in Browser](https://www.katacoda.com/cloudpassionall/scenarios/deployment-strategies)
+
 
 
 # What this Actually Does ?
