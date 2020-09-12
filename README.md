@@ -80,7 +80,7 @@ Once you have above Prerequisite you can Directly use this repo to deploy media 
 ![Katacoda Logo1](assets/publicSubnet.PNG)
 
 * Attach Your IGW to Subnet
-![Katacoda Logo1](assets/gw.PNG)
+![Katacoda Logo1](assets/igw.PNG)
 
 * Create Rote Table and associate RT to public subnet add a route to IGW
 ![Katacoda Logo4](assets/routeTable.PNG)
