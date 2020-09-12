@@ -45,6 +45,6 @@ variable "ec2_key_name" {
 
 variable "ssh_key_path" {
   type    = string
-  default = "/home/anurgupt/Desktop/ansible/vpc_peering.pem"
+  default = "vpc_peering.pem"
 }
 
