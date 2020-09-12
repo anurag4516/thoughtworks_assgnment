@@ -58,7 +58,7 @@ If you donot have above follow below links
 * Set AWS user Pem key naem in  ec2_key_name variable in variables.tf
 
 Once you have above Prerequisite you can Directly use this repo to deploy media wiki in your AWS Env by firing below command .
-> terraform init
+> terraform init  
 > terraform apply -auto-approve
 
 
