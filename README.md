@@ -34,8 +34,8 @@ If you donot have above follow below links
 # How to use this Repo ?
 
 ## Clone repo
-> git clone https://github.com/anurag4516/thoughtworks_assgnment.git
-<br\>
+> git clone https://github.com/anurag4516/thoughtworks_assgnment.git  
+
 > cd thoughtworks_assgnment
 
 ## Customize your I/P Parameters 
