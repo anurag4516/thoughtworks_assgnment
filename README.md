@@ -41,9 +41,29 @@ If you donot have above follow below links
 * Set AWS user Pem key naem in  ec2_key_name variable in variables.tf
 
 Once you have above Prerequisite you can Directly use this repo to deploy media wiki in your AWS Env by firing below command .
+> terraform apply -auto-approve
 
 # What this Actually Does ?
-* 
+* Creates a VPC in YOur AWS region 
+![Katacoda Logo](assets/vpcCreated.PNG)
+
+* Creates Public Subnet in your VPC
+![Katacoda Logo1](assets/publicSubnet.PNG)
+
+* Attach Your IGW to Subnet
+![Katacoda Logo1](assets/gw.PNG)
+
+* Create Rote Table and associate RT to public subnet add a route to IGW
+![Katacoda Logo4](assets/routeTable.PNG)
+
+* Add an EC2 instance 
+![Katacoda Logo3](assets/ec2Created.PNG)
+
+* Deploy Media Wiki App via ansible in that EC2 Instance you can access that app via http://{PublicIPOfInstance}
+![Katacoda Logo2](assets/success.png)
+![Katacoda Logo2](assets/appDeploy.PNG)
+
+
 
 
 
