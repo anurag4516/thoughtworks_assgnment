@@ -1,13 +1,8 @@
-provider "aws" {
-  region     = "us-east-1"
-  alias      = "east"
-  
+resource "aws_internet_gateway" "lab_gateway" {
+  vpc_id = aws_vpc.lab_vpc.id
+  tags = {
+    Name = var.projecttag
+  }
 
 }
 
-provider "aws" {
-  region     = "us-west-2"
-  alias      = "west"
- 
-
-}

@@ -20,4 +20,10 @@ resource "aws_security_group" "lab_security_group" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+  tags = {
+    Name = var.projecttag
+  }
+
 }
+
