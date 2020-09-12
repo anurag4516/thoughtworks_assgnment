@@ -1,0 +1,18 @@
+---
+- name: Copying http.conf
+  become: yes
+  template:
+    src: templates/httpd.conf.j2
+    dest: /etc/httpd/conf/httpd.conf
+
+- name: Change Ownership
+  become: yes
+  command: "chown -R apache:apache /var/www/html/media"
+
+
+- name: Restart service httpd, in all cases
+  become: yes
+  service:
+    name: httpd
+    state: restarted
+

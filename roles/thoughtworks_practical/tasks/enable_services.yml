@@ -1,0 +1,9 @@
+---
+  - name: Enable Services
+    become: yes
+    systemd:
+      name:
+        - httpd
+        - mariadb
+      enabled: yes
+      masked: no

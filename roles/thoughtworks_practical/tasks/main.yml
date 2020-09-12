@@ -1,0 +1,13 @@
+---
+# tasks file for thoughtworks_practical
+
+- include: "{{ item }}"
+  loop:
+    - install_packages.yml
+    - install_pip_pythonmysql.yml
+    - mysql_secure_installation.yml
+    - download_mediawiki.yml
+    - configure_apache.yml
+    - firewall_config.yml
+    - selinux_config.yml
+~                          
