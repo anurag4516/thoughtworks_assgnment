@@ -58,7 +58,7 @@ If you donot have above follow below links
 * Set AmiID key in  ec2_ami variable in variables.tf
 ![Katacoda Logo](assets/amiId.PNG)  
 
-![Katacoda Logo](assets/amiIdadminCred.PNG)
+![Katacoda Logo](assets/adminCred.PNG)
 
 * Set AWS user Pem key naem in  ec2_key_name variable in variables.tf
 
