@@ -55,6 +55,8 @@ If you donot have above follow below links
 > export AWS_SECRET_ACCESS_KEY={yourcred}  
 
 * Set AmiID key in  ec2_ami variable in variables.tf
+![Katacoda Logo](assets/amiid.PNG)
+
 * Set AWS user Pem key naem in  ec2_key_name variable in variables.tf
 
 Once you have above Prerequisite you can Directly use this repo to deploy media wiki in your AWS Env by firing below command .
