@@ -52,14 +52,16 @@ If you donot have above follow below links
 * Set AWSAccess key in  aws_access_key variable in variables.tf
 * Set AWSSecret key in  aws_secret_key variable in variables.tf
 ### OR
-![Katacoda Logo](assets/IAM1.PNG)
+![Katacoda Logo](assets/IAM1.PNG)  
+
+![Katacoda Logo](assets/adminCred.PNG)  
+
 > export AWS_ACCESS_KEY_ID={your Cred}  
 > export AWS_SECRET_ACCESS_KEY={yourcred}  
 
 * Set AmiID key in  ec2_ami variable in variables.tf
 ![Katacoda Logo](assets/amiId.PNG)  
 
-![Katacoda Logo](assets/adminCred.PNG)
 
 * Set AWS user Pem key name in  ec2_key_name variable in variables.tf
 
