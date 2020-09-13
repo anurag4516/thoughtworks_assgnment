@@ -2,19 +2,9 @@
   - name: install the latest version of dnf packages
     become: yes
     dnf:
-      name:
-        - httpd
-        - php
-        - php-mysqlnd
-        - php-gd
-        - php-xml
-        - python3-firewall
-        - firewalld
-        - mariadb-server
-        - mariadb
-        - php-mbstring
-        - php-json
+      name: "{{ item }}"      
       state: latest
+    loop: "{{ dnfPackages }}"  
 
   - name: Make sure a service is running
     become: yes

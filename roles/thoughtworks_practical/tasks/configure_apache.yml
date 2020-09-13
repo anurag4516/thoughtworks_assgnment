@@ -7,7 +7,7 @@
 
 - name: Change Ownership
   become: yes
-  command: "chown -R apache:apache /var/www/html/media"
+  command: "chown -R apache:apache {{apacheHtmlLocation}}/{{ locationInsideApache }}"
 
 
 - name: Restart service httpd, in all cases
