@@ -1,14 +1,14 @@
 ---
 - name: Download MediaWiki
   get_url:
-    url: "https://releases.wikimedia.org/mediawiki/1.34/mediawiki-1.34.2.tar.gz"
-    dest: /home/ec2-user/mediawiki-1.34.2.tar.gz
+    url: "{{ mediaWikiUrl }}"
+    dest: {{ userHome }}/{{ mediaWikiArchiveName }}
 
 
 - name: Download GPG signature
   get_url:
     url: "https://releases.wikimedia.org/mediawiki/1.34/mediawiki-1.34.2.tar.gz.sig"
-    dest: /home/ec2-user/
+    dest: {{ userHome }}
 
 
 
@@ -22,8 +22,8 @@
 - name: Unarchive MediaWiki
   become: yes
   unarchive:
-    src: /home/ec2-user/mediawiki-1.34.2.tar.gz
-    dest: /var/www/html/
+    src: {{ userHome }}/{{ mediaWikiArchiveName }}
+    dest: {{apacheHtmlLocation}}
     remote_src: yes
 
 - name: Adding Hard Link
@@ -34,6 +34,6 @@
   become: yes
   command: mv mediawiki-1.34.2/ media
   args:
-    chdir: /var/www/html/
+    chdir: {{apacheHtmlLocation}}
   ignore_errors: True
 
