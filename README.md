@@ -20,8 +20,9 @@ I am choosing Method 3 & using Cloud as AWS i.e
 ### a) Must have an account on AWS .Plus Should have valid AWS user (Access Key and Secret ID) with permissions atleast to create Insrance/VPC/Subnet/IGW/Routetable
 
 If you donot Have above follow below Links and steps
-* Create Free tier AWS Account
-* Get Acess Key and Secret 
+* [Create Free tier AWS Account](https://aws.amazon.com/free/) 
+* [Get Acess Key and Secret](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html)
+* [EC2 Key Pair](https://docs.aws.amazon.com/cli/latest/userguide/cli-services-ec2-keypairs.html)
 
 
 #### Wget your .pem file here
@@ -60,7 +61,7 @@ If you donot have above follow below links
 
 ![Katacoda Logo](assets/adminCred.PNG)
 
-* Set AWS user Pem key naem in  ec2_key_name variable in variables.tf
+* Set AWS user Pem key name in  ec2_key_name variable in variables.tf
 
 Once you have above Prerequisite you can Directly use this repo to deploy media wiki in your AWS Env by firing below command .
 > terraform init  
