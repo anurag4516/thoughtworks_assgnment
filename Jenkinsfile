@@ -1,21 +1,19 @@
 pipeline 
 {
     agent any
-    tools 
-    {
-        maven 'Maven 3.3.9'
-       
-    }
+   
     stages
     {
         
-       stage('Checkout Main Project')
+       stage('Install Ansible ')
        {
-         steps{
-           checkout scm;
-         }
+        
        }
-       stage('Checkout external Hellow-world proj')
+       stage('Install Terraform ')
+       {
+        
+       }
+       stage('Clone Existing Project')
         {
        
             // I have configured credentials in Jenkins with its id as anurag4516 & set password
