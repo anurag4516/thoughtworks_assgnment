@@ -1,7 +1,7 @@
 pipeline 
 {
      agent {
-        docker { image 'ubuntu' }
+        docker { image 'ubuntu:bionic' }
     }
     stages
     {
@@ -12,9 +12,9 @@ pipeline
                 sh '''  
                      apt update;
                     
-                     apt-get install software-properties-common -y;
-                     apt-add-repository --yes --update ppa:ansible/ansible;  
-                     apt install ansible -y ;
+                     apt-get -y install python3 python3-nacl python3-pip libffi-dev;
+                     pip3 install ansible;  
+                     
                     
                     ansible --version;
                 
