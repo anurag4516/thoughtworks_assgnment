@@ -11,7 +11,11 @@ pipeline
             steps { 
                 sh '''  
                      apt update;
-                     apt install python-pip -y ;
+                    
+                     apt-get install software-properties-common -y;
+                     apt-add-repository universe;
+                     apt-get update
+                      apt install python-pip -y ;
                     pip install ansible-base;
                     ansible --version;
                 
