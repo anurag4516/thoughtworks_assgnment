@@ -10,8 +10,8 @@ pipeline
        {
             steps { 
                 sh '''  
-                    sudo apt update;
-                    sudo apt install python3-pip;
+                     apt update;
+                     apt install python3-pip;
                     pip install ansible-base;
                     ansible --version;
                 
