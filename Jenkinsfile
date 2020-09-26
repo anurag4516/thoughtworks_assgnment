@@ -12,7 +12,7 @@ pipeline
                 sh '''  
                      apt update;
                     
-                     apt-get -y install python3 python3-nacl python3-pip libffi-dev;
+                     apt-get -y install python3 python3-nacl python3-pip libffi-dev curl;
                      pip3 install ansible;  
                      
                     
