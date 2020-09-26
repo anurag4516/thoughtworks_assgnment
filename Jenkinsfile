@@ -13,10 +13,9 @@ pipeline
                      apt update;
                     
                      apt-get install software-properties-common -y;
-                     apt-add-repository universe;
-                     apt-get update
-                      apt install python-pip -y ;
-                    pip install ansible-base;
+                     apt-add-repository --yes --update ppa:ansible/ansible;  
+                     apt install ansible -y ;
+                    
                     ansible --version;
                 
                 '''
