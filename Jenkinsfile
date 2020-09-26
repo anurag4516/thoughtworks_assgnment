@@ -10,7 +10,7 @@ pipeline
        {
             steps { 
                 sh '''  
-                    apt-get -y remove ansible-base;
+                    
                     pip install ansible-base;
                     ansible --version;
                 
