@@ -30,20 +30,11 @@ pipeline
         
         }
             
-         stage("Compile & Build Sources from Maven")
+         stage("Deploy and Install in AWS ")
         {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                    mvn clean package
-                    sh "ls -lat"
-                   
-                '''
-            }
 
         }  
-        stage("Build Docker Image for generated jar")
+        stage("Validate ")
          {
             steps 
             {
@@ -56,7 +47,7 @@ pipeline
         }
         
         
-        stage("Push Docker Image to registory")
+        stage("Destroy")
         {
             steps 
             {
