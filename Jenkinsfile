@@ -11,7 +11,7 @@ pipeline
             steps { 
                 sh '''  
                      apt update;
-                     apt install python3-pip;
+                     apt install python3-pip -y ;
                     pip install ansible-base;
                     ansible --version;
                 
