@@ -7,8 +7,13 @@ pipeline
         
        stage('Install Ansible ')
        {
-            steps {
-                sh 'echo "Hello World"'
+            steps { 
+                sh '''  
+                    apt-get -y remove ansible-base;
+                    pip install ansible-base;
+                    ansible --version;
+                
+                '''
                
             }
         
@@ -16,7 +21,14 @@ pipeline
        stage('Install Terraform ')
        {
            steps {
-                sh 'echo "Hello World"'
+                sh '''
+                    curl -fsSL https://apt.releases.hashicorp.com/gpg |  apt-key add -;
+                    apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main";
+                    apt-get update && sudo apt-get install terraform;
+                    terraform --version;                   
+                
+                
+                '''
                
             }
         
