@@ -93,6 +93,14 @@ pipeline
         
     }
    
-    
+ post {
+        always {
+              sh '''
+                 terraform destroy -autoapprove
+                 '''
+            echo 'One way or another, I have finished'
+            deleteDir() /* clean up our workspace */
+        }
+ }
 
 }
