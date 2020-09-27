@@ -52,7 +52,8 @@ pipeline
            
         
         }
-            
+         try {   
+              
          stage("Deploy and Install in AWS ")
         {
             steps {
@@ -65,6 +66,19 @@ pipeline
             }
 
         }  
+         }catch(e)
+         {
+              stage("Destroy")
+               {
+            steps {
+                terraform destroy -autoapprove
+               
+                 }
+        }
+              build_ok = false
+              echo e.toString() 
+         }
+         
         stage("Validate ")
          {
              steps {
