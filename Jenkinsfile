@@ -57,7 +57,7 @@ pipeline
         {
             steps {
                  sh '''
-                 cd thoughtworks_assgnment/;
+                 ls -ltra;
                  terraform plan
                  
                  '''
