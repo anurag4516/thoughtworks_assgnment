@@ -71,7 +71,9 @@ pipeline
               stage("Destroy")
                {
             steps {
+                 sh '''
                 terraform destroy -autoapprove
+                '''
                
                  }
         }
@@ -92,7 +94,9 @@ pipeline
         stage("Destroy")
         {
             steps {
-                terraform destroy -autoapprove
+                sh '''
+                 terraform destroy -autoapprove
+                 '''
                
             }
         }
