@@ -56,7 +56,7 @@ pipeline
               
          stage("Deploy and Install in AWS ")
         {
-           try {  
+          
              steps {
                  sh '''
                  cd terraformcode;
@@ -65,17 +65,7 @@ pipeline
                  '''
                
             }
-           }catch(e)
-             {
-                    
-            steps {
-                 sh '''
-                terraform destroy -autoapprove
-                '''
-               
-                 }
-             }
-
+           
         }  
          
          
