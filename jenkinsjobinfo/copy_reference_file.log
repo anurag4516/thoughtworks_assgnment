@@ -89,3 +89,6 @@ INSTALLED plugins/pipeline-model-api.jpi : 1.7.2
 INSTALLED plugins/durable-task.jpi : 1.35
 INSTALLED plugins/favorite.jpi : 2.3.2
 INSTALLED plugins/mercurial.jpi : 2.10
+--- Copying files at Sun Sep 27 04:53:06 UTC 2020
+UPGRADED plugins/scm-api.jpi : Image version (2.6.4) is newer than installed version (2.6.3)
+UPGRADED plugins/trilead-api.jpi : Image version (1.0.11) is newer than installed version (1.0.10)
