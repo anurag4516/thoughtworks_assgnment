@@ -92,3 +92,6 @@ INSTALLED plugins/mercurial.jpi : 2.10
 --- Copying files at Sun Sep 27 04:53:06 UTC 2020
 UPGRADED plugins/scm-api.jpi : Image version (2.6.4) is newer than installed version (2.6.3)
 UPGRADED plugins/trilead-api.jpi : Image version (1.0.11) is newer than installed version (1.0.10)
+--- Copying files at Sun Sep 27 11:17:12 UTC 2020
+UPGRADED plugins/git.jpi : Image version (4.4.4) is newer than installed version (4.4.3)
+UPGRADED plugins/git-client.jpi : Image version (3.5.1) is newer than installed version (3.5.0)
