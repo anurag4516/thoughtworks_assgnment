@@ -12,6 +12,7 @@ pipeline
                apt-get -y install python3 python3-nacl python3-pip libffi-dev curl lsb-release software-properties-common ;
               '''
          }
+ parallel {        
         
        stage('Install Ansible ')
        {
@@ -44,6 +45,7 @@ pipeline
             }
         
        }
+     }
        stage('Clone Existing Project')
         {
        
