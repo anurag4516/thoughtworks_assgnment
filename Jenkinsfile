@@ -52,11 +52,12 @@ pipeline
            
         
         }
-         try {   
+          
               
          stage("Deploy and Install in AWS ")
         {
-            steps {
+           try {  
+             steps {
                  sh '''
                  cd terraformcode;
                  terraform plan
@@ -64,23 +65,22 @@ pipeline
                  '''
                
             }
-
-        }  
-         }catch(e)
-         {
-              stage("Destroy")
-               {
+           }catch(e)
+             {
+                    
             steps {
                  sh '''
                 terraform destroy -autoapprove
                 '''
                
                  }
-        }
-              build_ok = false
-              echo e.toString() 
-         }
+             }
+
+        }  
          
+         
+            
+
         stage("Validate ")
          {
              steps {
