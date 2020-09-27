@@ -60,6 +60,7 @@ pipeline
              steps {
                  sh '''
                  cd terraformcode;
+                 terraform init;
                  terraform plan
                  
                  '''
