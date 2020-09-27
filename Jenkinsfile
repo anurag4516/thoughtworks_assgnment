@@ -111,6 +111,8 @@ pipeline
                  terraform destroy -auto-approve
                  '''
             echo 'One way or another, I have finished'
+            emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
+    
             deleteDir() /* clean up our workspace */
         }
  }
