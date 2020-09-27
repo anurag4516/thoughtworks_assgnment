@@ -57,7 +57,7 @@ pipeline
         {
             steps {
                  sh '''
-                 ls -ltra;
+                 cd terraformcode;
                  terraform plan
                  
                  '''
@@ -78,7 +78,7 @@ pipeline
         stage("Destroy")
         {
             steps {
-                sh 'echo "Hello World"'
+                terraform destroy -autoapprove
                
             }
         }
