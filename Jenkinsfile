@@ -8,7 +8,8 @@ pipeline
         
        stage('Install Ansible ')
        {
-            steps { 
+            steps {
+                  echo "Database engine is ${AWS_ACCESS_KEY_ID}"
                 sh '''  
                      apt update;
                     
@@ -34,6 +35,8 @@ pipeline
                 
                 
                 '''
+               
+
                
             }
         
