@@ -46,7 +46,7 @@ pipeline
        
             // I have configured credentials in Jenkins with its id as anurag4516 & set password
             steps {
-                sh 'echo "Hello World"'
+                checkout scm;
                
             }
            
@@ -56,7 +56,11 @@ pipeline
          stage("Deploy and Install in AWS ")
         {
             steps {
-                sh 'echo "Hello World"'
+                 sh '''
+                 cd thoughtworks_assgnment/;
+                 terraform plan
+                 
+                 '''
                
             }
 
