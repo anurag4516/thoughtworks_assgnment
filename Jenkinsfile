@@ -97,7 +97,7 @@ pipeline
         {
             steps {
                 sh '''
-                 terraform destroy -autoapprove
+                 terraform destroy -auto-approve
                  '''
                
             }
@@ -108,7 +108,7 @@ pipeline
  post {
         always {
               sh '''
-                 terraform destroy -autoapprove
+                 terraform destroy -auto-approve
                  '''
             echo 'One way or another, I have finished'
             deleteDir() /* clean up our workspace */
