@@ -71,10 +71,7 @@ pipeline
              steps {
                  sh '''
                  cd terraformcode;
-                 terraform init;
-                 export AWS_ACCESS_KEY_ID=AKIA26457DXPZVOZA5ZY;
-                 export AWS_SECRET_ACCESS_KEY=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;
-                 terraform plan;
+                 
                  
                  '''
                
@@ -100,6 +97,7 @@ pipeline
             steps {
                 sh '''
                  terraform destroy -auto-approve
+                 echo 'Destroyed'
                  '''
                
             }
