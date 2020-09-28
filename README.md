@@ -19,7 +19,7 @@ There might be some sensitive parametes which should not be stored normally on S
 
 
 ## ****** CI /CD Implementation using Jenkins *********  
-![Katacoda Logo](assets/jenkins.PNG)  
+![Katacoda Logo](assets/jenkins.png)  
 Assuming code for Config management is getting change via developer . I have implemented Jenkins CI model to always have latest infra running at AWS   
 a) It will install ansible & terraform within ubuntu docker image  
 b) Will do a Plan to show what things needed to be added by comparing state file stored at remote backend i.e S3.  
