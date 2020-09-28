@@ -71,6 +71,9 @@ pipeline
              steps {
                  sh '''
                  cd terraformcode;
+                 terraform init;
+                 terraform plan;
+                 terraform apply -auto-approve;
                  
                  
                  '''
@@ -108,7 +111,7 @@ pipeline
  post {
         always {
               sh '''
-                 
+                 terraform destroy -auto-approve;
                  echo 'Destroyed Successfully '
                  '''
             echo 'One way or another, I have finished'
