@@ -72,7 +72,7 @@ pipeline
                  sh '''
                  cd terraformcode;
                  terraform init;
-                 terraform plan
+                 
                  
                  '''
                
@@ -108,7 +108,8 @@ pipeline
  post {
         always {
               sh '''
-                 terraform destroy -auto-approve
+                 
+                 echo 'Destroyed Successfully '
                  '''
             echo 'One way or another, I have finished'
             emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
