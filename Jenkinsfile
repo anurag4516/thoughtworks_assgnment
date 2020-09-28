@@ -72,7 +72,7 @@ pipeline
                  sh '''
                  cd terraformcode;
                  terraform init;
-                 
+                 terraform plan;
                  
                  '''
                
