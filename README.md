@@ -1,3 +1,43 @@
+## *******   Improovements from master branch *******
+
+Master branch is basically simple implementation (POC) of problem statement in this branch I have tried to implement over all best practices which are ideal for production based system    
+
+## ******     Security Wise improovements *************
+
+### a) Using Backend to store terraform state file (S3 bucket)  
+
+We habe created a S3 bucket and configured it as backend + enabled encryption on it so that our state file could be shred accross various developers .
+Due to encryption its data is also not interpretted by anyone .
+
+### b) Using Jenkins Plugin to store AWS secret Access Key  
+Before doing terraform apply we have to configure AWS secret and Access key ID to authenticate terraform with your AWS cloud . We have used Global jenkins configuration to store that information , so that no one could steal your credentials . Only Jenkins admin should have authorization to change those credentials
+
+### c) Sensitive O/P Parameters are encoded  
+
+### d) Encrypted ansible vars file via Ansible Vault (Still to be implemented ,More efficient method is using Ansible tower and credentials .Need more time for same ETC : 1 day )  
+There might be some sensitive parametes which should not be stored normally on Source control . We should encrypt then via ansible vault and use credentils to store key of it and call the template using Ansible tower api key via http.  
+
+
+## ****** CI /CD Implementation using Jenkins *********  
+Assuming code for Config management is getting change via developer . I have implemented Jenkins CI model to always have latest infra running at AWS   
+a) It will install ansible & terraform within ubuntu docker image  
+b) Will do a Plan to show what things needed to be added by comparing state file stored at remote backend i.e S3.  
+c) Will Apply the changes to AWS Envionment . ( There can also be an approval process to deploy code via mail . That can also be implemented )
+d) Once deployed reciept list will get mail sharing details 
+
+Use below command to see already built docker image which have all the required configurations and plugins installed at local github as volume  
+`sudo docker run --privileged -u 0 -p 8081:8080 -p 50000:50000 -v /root/thoughtworks_assgnment/jenkinsjobinfo:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean `   
+
+
+## ******** Organized Folder structure ***********
+Now All code is organized into 3 folders  
+a) Terraform code : All terraform related code is stored over here   
+b) Ansible Code: All ansible related is stored over here    
+c) Jenkins Job Info : Volume reserved for jenkins build related activities  
+d) Jenkinsfile : Contains Jenkins Pipeline related Code  
+
+  
+
 # Problem Statement
 
 ### We want you to automate the deployment of MediaWiki using one that you are most comfortable  with:
